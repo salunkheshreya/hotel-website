@@ -1,0 +1,121 @@
+
+.hotel-filters {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: 2px rgb(230, 226, 226) solid;
+  width: 280px;
+ flex-wrap: wrap;
+  overflow: scroll;
+
+
+  
+}
+
+h4 {
+font-size: 18px;
+margin-bottom: 10px;
+color: #333;
+}
+
+
+.price-range {
+display: flex;
+align-items: center;
+gap: 10px; 
+margin-bottom: 20px;
+}
+
+
+.price-input {
+width: 100px; 
+padding: 8px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+outline: none;
+transition: border-color 0.3s ease;
+}
+
+.price-input:focus {
+border-color: #4CAF50; 
+}
+
+
+.to-text {
+font-size: 14px;
+color: #555;
+}
+
+
+.submit-button {
+background-color: #4CAF50; 
+color: white;
+border: none;
+padding: 8px 16px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 4px;
+}
+
+.submit-button:hover {
+background-color: #45a049; 
+transform: scale(1.1); 
+
+}
+
+.submit-button:active {
+background-color: #3e8e41; 
+transform: scale(0.95); }
+
+
+.filter-section {
+  margin-bottom: 2px;
+  
+ 
+}
+
+.filter-section h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.filter-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  
+
+}
+
+.filter-section li {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+ 
+
+}
+
+.filter-section input[type="checkbox"] {
+  margin-right: 10px;
+  margin-bottom: -23px;
+}
+.filter-button {
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  cursor: pointer; 
+  border-radius: 5px;
+  width: 40%; 
+  border: 2px solid #4CAF50;
+  
+}

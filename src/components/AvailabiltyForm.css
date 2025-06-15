@@ -1,0 +1,44 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+   
+  }
+  label {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  input, select, button {
+    padding: 5px;
+    margin-top: 5px;
+  }
+  button {
+    background-color:green;
+    display: flex;
+     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+  }
+ 
+   .carousel-container 
+     {  
+         
+         position: relative;
+         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         width: 70%; 
+         bottom: 100px;
+         left: 17%; 
+         transform: translateX(-23%); 
+         margin: auto; 
+         overflow:inherit;
+         background-color:white;
+         border-style:groove;
+         border: 2px solid black;
+        text-align: center;
+        border-radius: 30px;
+     
+     }

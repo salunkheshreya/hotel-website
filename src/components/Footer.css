@@ -1,0 +1,45 @@
+ /*Footer.css*/
+ .footer {
+    background-color:black;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position:static;
+    left: 0;
+    bottom: -20;
+    width: 100%;
+   
+   }
+  .d1{ 
+  font-size: 25px;
+  }
+  .d1:hover{
+    color: pink;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin:0  auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer-content p {
+    margin: 0;
+    color: aliceblue;
+  }
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  .footer-links li {
+    display: inline;
+  }
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer-links a:hover {
+    text-decoration: underline;
+  }

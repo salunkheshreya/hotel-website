@@ -1,0 +1,20 @@
+/*Home.css*/
+.home {
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px;
+    color: #4CAF50;
+    transform: translateY(100px);
+      opacity: 0;
+      animation: slideUp 2.0s ease-out forwards;
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

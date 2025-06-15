@@ -1,0 +1,42 @@
+.registration-form{
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  width: 60%;
+  margin-left: 20%;
+  background-image: transparent;
+  border: 3px solid black;
+
+}
+.form-container{
+background-image: url('https://img.freepik.com/free-photo/blurred-illuminated-wooden-hall_1203-1265.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); 
+  
+}
+h2{
+  text-align: center;
+}
+.registration-form input{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  font-size: 15px;
+}
+.registration-form button{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 20%;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  margin-left: 260px;
+  justify-content: center;
+}

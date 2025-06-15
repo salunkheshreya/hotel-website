@@ -1,0 +1,80 @@
+.hotel-card {
+  display: flex; 
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px auto; /* Center the card */
+ margin-left:330px;
+transform: translateY(-2000px) ; 
+height: 350px;
+
+}
+
+/* Image styling */
+.hotel-card img {
+  width: 700px;
+  height: 380px; 
+  object-fit:fill; 
+  margin-right: 100px;
+  border-radius: 8;
+  
+}
+
+/* Card content */
+.hotel-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+place-items: center;
+
+}
+.hotel-card-title{
+  font-size: 16px;
+  font-weight: bold;
+color:cornflowerblue;
+display:inline;
+}
+
+.hotel-card-content h2 {
+  margin: 0;
+
+color: pink;
+}
+
+.hotel-card-content p {
+  color: #555;
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+.hotel-card-content .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.book-now-button {
+  padding: 9px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; 
+  margin-left: 20px; 
+  text-align: center;
+ 
+  width: 150px;
+  
+  
+  
+}
+
+.book-now-button:hover {
+  background-color: #0056b3;
+  text-align: center;
+  
+}

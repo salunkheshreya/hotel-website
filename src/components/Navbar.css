@@ -1,0 +1,36 @@
+ /*Navbar.css*/
+ .navbar {
+    background-color:rgb(18, 16, 16);
+    overflow: hidden;
+    display: flex;
+    
+    height:70px;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .navbar-logo img {
+    height: 70px; 
+    margin-right: 20px;
+  }
+  .navbar ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 3; 
+  }
+  .navbar ul li {
+    display: inline;
+  }
+  .navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 15px; /* Adjust the text size here */
+    transition: background-color 0.3s,color 0.3s;
+  }
+   .navbar ul li a:hover {
+    color: rgb(64, 228, 116);
+  }

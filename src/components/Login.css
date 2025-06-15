@@ -1,0 +1,47 @@
+.login-form{
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 70%;
+    margin-left: 20%;
+    background-image: transparent;
+    border: 3px solid black;
+    box-shadow: cadetblue;
+     width: 60%;
+     
+}
+
+.form2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20221228/pngtree-purple-gradient-frosted-frosted-glass-suspension-floating-background-glass-blur-effect-image_1500428.jpg');
+}
+
+h2{
+    text-align: center;
+    
+}
+
+.login-form input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+
+}
+
+.login-form button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    margin-left: 260px;
+    justify-content: center;
+}

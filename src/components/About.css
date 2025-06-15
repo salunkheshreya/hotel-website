@@ -1,0 +1,9 @@
+.about-us-container{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   padding: 10px;
+    margin: 20px;
+}
+.about-us-container h2{
+  text-align: left;
+}
+
