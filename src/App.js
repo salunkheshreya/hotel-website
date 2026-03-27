@@ -1,6 +1,3 @@
-// src/App.js
-import React from 'react';
-import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
@@ -19,7 +16,6 @@ import Testimonial from './components/Testimonial';
 import './App.css';
 
 import AvailabilityForm from './components/AvailabilityForm';
-import Filter from './components/Filters';
 import KidsRoom from './components/KidsRoom';
 import DeluxeRoom from './components/DeluxeRoom';
 import SemiDeluxeRoom from './components/SemiDeluxeRoom';

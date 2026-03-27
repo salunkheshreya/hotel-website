@@ -1,15 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
 import {Link} from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 function Rooms(){
 
    
-    const navigate = useNavigate();
-  const [showDetails, setShowDetails] = useState(false);
     //    event handler
         const handleClick = ()=>{
-         setShowDetails(true);
+         // setShowDetails(true);
         }
 
 return (

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import config from '../config';
 
-import { FaEnvelope, FaPhone, FaLock } from 'react-icons/fa';
+import { FaEnvelope, FaLock } from 'react-icons/fa';
 import './Login.css';
 const Login = () => {
   const [email, setEmail] = useState('');
-  const [mobileNumber, setMobileNumber] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const [isFormVisible, setIsFormVisible] = useState(true);
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const handleLogin = async (e) => {
@@ -65,13 +63,8 @@ const Login = () => {
     }
   };
 
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
-
   return (
-    isFormVisible && (
-      <div className="auth-container">
+    <div className="auth-container">
         <div className="auth-image-side">
           <div className="auth-overlay">
             <h1>Welcome Back</h1>
@@ -112,8 +105,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    )
   );
 };
 
-export default Login;;
+export default Login;

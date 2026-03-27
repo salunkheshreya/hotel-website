@@ -18,7 +18,6 @@ const RegistrationForm = () => {
   const [profilePicture, setProfilePicture] = useState(null);
   const [profilePictureFile, setProfilePictureFile] = useState(null);
   const [message, setMessage] = useState('');
-  const [isFormVisible, setIsFormVisible] = useState(true);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -85,8 +84,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    isFormVisible && (
-      <div className="auth-container">
+    <div className="auth-container">
         <div className="auth-image-side register-side">
           <div className="auth-overlay">
             <h1>Join Us</h1>
@@ -208,7 +206,6 @@ const RegistrationForm = () => {
           </div>
         </div>
       </div>
-    )
   );
 };
 
