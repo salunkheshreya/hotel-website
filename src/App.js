@@ -19,7 +19,7 @@ import Testimonial from './components/Testimonial';
 import './App.css';
 
 import AvailabilityForm from './components/AvailabilityForm';
-import Filter from './components/FIlters';
+import Filter from './components/Filters';
 import KidsRoom from './components/KidsRoom';
 import DeluxeRoom from './components/DeluxeRoom';
 import SemiDeluxeRoom from './components/SemiDeluxeRoom';

@@ -3,7 +3,7 @@
 
 
   import {useNavigate} from 'react-router-dom'
-  import './AvailabiltyForm.css'
+  import './AvailabilityForm.css'
   function AvailabilityForm() {
     const [checkInDate, setCheckInDate] = useState('');
     const [checkOutDate, setCheckOutDate] = useState('');

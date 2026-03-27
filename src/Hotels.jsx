@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HotelCard from "./components/HotelCard";
-import Filter from './components/FIlters';
+import Filter from './components/Filters';
 import './components/styles.css';
 
 
