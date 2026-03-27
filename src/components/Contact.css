@@ -1,73 +1,84 @@
 /* Contact.css*/
 .contact-us-container {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-size:cover;
-    background-image: url('https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139104.jpg');
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-size: cover;
+  background-image: url('https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139104.jpg');
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 2.0s ease-out forwards;
+
+}
+
+.h1 {
+  margin-left: 700px;
+  padding-top: 50px;
+}
+
+
+@keyframes slideUp {
+  from {
     transform: translateY(100px);
     opacity: 0;
-    animation: slideUp 2.0s ease-out forwards;
- 
   }
-  .h1{
-   margin-left: 700px;
-   padding-top: 50px;
- }
 
-
-  @keyframes slideUp {
-    from {
-      transform: translateY(100px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  .m1{
+}
+
+.m1 {
   padding-left: 150px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding: 20px;
+  margin-left: 500px;
+  width: 40%;
+  animation: slideOut 1s ease-in forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(-100%);
   }
-  .contact-form {
-    display: flex;
-    flex-direction:column;
-   margin-top:100px;
-    padding:20px;
-    margin-left: 500px;
-    width: 40%;
-    animation: slideOut 1s ease-in forwards;
+
+  to {
+    transform: translateX(0);
   }
-  @keyframes slideOut {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(0);
-      }
-    }
-  .contact-form label {
-    margin-top: 10px;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    margin-bottom: 30px;
-    border: 4px solid #e5e6d8;
-    border-radius: 5px;  
-  }
-   .contact-form button {
-    padding: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding-left: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-right: 150px;
-    margin-left: 210px;
-  }
-  .contact-form button:hover {
-    background-color: pink;
-  }
+}
+
+.contact-form label {
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 30px;
+  border: 4px solid #e5e6d8;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: pink;
+}

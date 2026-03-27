@@ -1,0 +1,323 @@
+.room-page-container {
+    max-width: 100%;
+    margin: 40px 0;
+    padding: 20px 5%;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #333;
+}
+
+.room-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.room-page-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.room-stars {
+    color: #f1c40f;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.room-back-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.room-back-btn:hover {
+    background: #f5f5f5;
+}
+
+.room-content-flex {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.room-main-content {
+    flex: 6;
+    min-width: 600px;
+}
+
+.room-sidebar {
+    flex: 4;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Images Grid */
+.room-images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.room-images-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.room-img-main {
+    grid-row: span 2;
+}
+
+/* Description & Amenities */
+.room-description-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    font-style: italic;
+    padding-left: 15px;
+    border-left: 3px solid #007bff;
+}
+
+.room-amenities-section h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.room-amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.room-amenities-grid li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.room-buttons-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-feature {
+    padding: 10px 20px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-feature:hover {
+    background: #e9ecef;
+}
+
+/* Sidebar Cards */
+.booking-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.booking-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 5px;
+}
+
+.booking-card .bed-info {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.booking-card-perks {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.booking-card-perks li {
+    margin-bottom: 10px;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+.booking-card-perks li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+}
+
+.price-section {
+    margin-bottom: 25px;
+}
+
+.price-label {
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    display: inline-block;
+    margin: 0;
+}
+
+.price-taxes {
+    font-size: 0.9rem;
+    color: #888;
+    margin-left: 10px;
+}
+
+.btn-book-primary {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.btn-book-primary:hover {
+    background: #0056b3;
+}
+
+.login-promo {
+    background: #fff9e6;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ffe599;
+}
+
+.login-promo h4 {
+    margin: 0;
+    color: #bfa100;
+}
+
+.login-form {
+    display: flex;
+    gap: 10px;
+}
+
+.login-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-form .btn-login {
+    background: #bfa100;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.room-types-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.room-types-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 20px;
+}
+
+.room-type-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.room-type-option:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.room-type-details h4 {
+    margin: 0 0 5px 0;
+}
+
+.room-type-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.room-type-action {
+    text-align: right;
+}
+
+.room-type-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+.btn-add-room {
+    padding: 5px 15px;
+    border: 1px solid #28a745;
+    background: transparent;
+    color: #28a745;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-add-room:hover {
+    background: #28a745;
+    color: white;
+}

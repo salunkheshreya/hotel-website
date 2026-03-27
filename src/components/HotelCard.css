@@ -1,46 +1,50 @@
 .hotel-card {
-  display: flex; 
+  display: flex;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 20px auto; /* Center the card */
- margin-left:330px;
-transform: translateY(-2000px) ; 
-height: 350px;
-
+  margin: 20px auto;
+  height: 350px;
+  /* Force uniform height for all cards */
+  width: 95%;
+  max-width: 1100px;
 }
 
 /* Image styling */
 .hotel-card img {
-  width: 700px;
-  height: 380px; 
-  object-fit:fill; 
-  margin-right: 100px;
-  border-radius: 8;
-  
+  width: 45%;
+  /* Use percentage of flex container */
+  height: 100%;
+  /* Fill exact height of the card */
+  object-fit: cover;
+  /* Prevent any stretching or squishing */
+  margin-right: 0;
+  border-radius: 0;
 }
 
 /* Card content */
 .hotel-card-content {
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   flex-direction: column;
-justify-content: center;
-place-items: center;
-
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  /* Take remaining space */
 }
-.hotel-card-title{
+
+.hotel-card-title {
   font-size: 16px;
   font-weight: bold;
-color:cornflowerblue;
-display:inline;
+  color: cornflowerblue;
+  display: inline;
 }
 
 .hotel-card-content h2 {
   margin: 0;
 
-color: pink;
+  color: pink;
 }
 
 .hotel-card-content p {
@@ -54,6 +58,7 @@ color: pink;
   font-weight: bold;
   margin: 10px 0;
 }
+
 .book-now-button {
   padding: 9px;
   background-color: #007bff;
@@ -63,18 +68,18 @@ color: pink;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-top: 20px; 
-  margin-left: 20px; 
+  margin-top: 20px;
+  margin-left: 20px;
   text-align: center;
- 
+
   width: 150px;
-  
-  
-  
+
+
+
 }
 
 .book-now-button:hover {
   background-color: #0056b3;
   text-align: center;
-  
+
 }

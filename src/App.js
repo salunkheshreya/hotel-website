@@ -45,9 +45,9 @@ function App() {
       <Routes>
         {/* Home page route */}
         <Route path="/" element={<motion.div {...pageTransition}><Home /><ImageCarousel /><AvailabilityForm /><Facilities /><Testimonial /></motion.div>} />
-        
+
         {/* Filter and Hotels */}
-        <Route path='/hotels' element={<div><Filter /><Hotels /></div>} />
+        <Route path='/hotels' element={<Hotels />} />
 
         {/* Room pages */}
         <Route path="/rooms" element={<div><Rooms /></div>} />

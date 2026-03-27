@@ -42,9 +42,9 @@ const PayNowForm = () => {
         return;
       }
     }
-   if (paymentMethod === 'upi' && upiId !== '') {
+    if (paymentMethod === 'upi' && upiId !== '') {
 
-  }
+    }
     if (!amount || amount <= 0) {
       setMessage('Please enter a valid amount.');
       return;
@@ -61,53 +61,56 @@ const PayNowForm = () => {
     setMessage('Payment Successful!');
     setTimeout(() => {
       navigate('/booking-confirmation', { state: { bookingDetails } });
-    }, 1500); 
+    }, 1500);
   };
 
   const handleBack = () => {
-    navigate(-1); 
+    navigate(-1);
   };
 
   return (
     <div className="pay-now-form-container">
-      <h2>Pay Now</h2>
       <form onSubmit={handleSubmit} className="pay-now-form1">
-      
+        <h2>Secure Payment</h2>
         <div className="input-container">
-          <h3>Name</h3>
+          <h3>Full Name</h3>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="Name on card"
             required
           />
         </div>
         <div className="input-container">
-          <h3>Email</h3>
+          <h3>Email Address</h3>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Receipt email"
             required
           />
         </div>
-        <div className="input-container">
-          <h3>Check-in Date</h3>
-          <input
-            type="date"
-            value={checkInDate}
-            onChange={(e) => setCheckInDate(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-container">
-          <h3>Check-out Date</h3>
-          <input
-            type="date"
-            value={checkOutDate}
-            onChange={(e) => setCheckOutDate(e.target.value)}
-            required
-          />
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <div className="input-container" style={{ flex: 1 }}>
+            <h3>Check-in</h3>
+            <input
+              type="date"
+              value={checkInDate}
+              onChange={(e) => setCheckInDate(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-container" style={{ flex: 1 }}>
+            <h3>Check-out</h3>
+            <input
+              type="date"
+              value={checkOutDate}
+              onChange={(e) => setCheckOutDate(e.target.value)}
+              required
+            />
+          </div>
         </div>
 
         <div className="input-container">
@@ -117,7 +120,7 @@ const PayNowForm = () => {
             onChange={(e) => setPaymentMethod(e.target.value)}
             required
           >
-            <option value="">Select Payment Method</option>
+            <option value="">Select Payment Method...</option>
             <option value="debit">Debit Card</option>
             <option value="credit">Credit Card</option>
             <option value="upi">UPI</option>
@@ -133,27 +136,31 @@ const PayNowForm = () => {
                 value={cardNumber}
                 onChange={(e) => setCardNumber(e.target.value)}
                 maxLength={18}
+                placeholder="0000 0000 0000 0000"
                 required
               />
             </div>
-            <div className="input-container">
-              <h3>Expiry Date</h3>
-              <input
-                type="month"
-                value={expireDate}
-                onChange={(e) => setExpireDate(e.target.value)}
-                required
-              />
-            </div>
-            <div className="input-container">
-              <h3>CVV</h3>
-              <input
-                type="text"
-                value={cvv}
-                onChange={(e) => setCvv(e.target.value)}
-                maxLength={4}
-                required
-              />
+            <div style={{ display: 'flex', gap: '20px' }}>
+              <div className="input-container" style={{ flex: 1 }}>
+                <h3>Expiry Date</h3>
+                <input
+                  type="month"
+                  value={expireDate}
+                  onChange={(e) => setExpireDate(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="input-container" style={{ flex: 1 }}>
+                <h3>CVV</h3>
+                <input
+                  type="text"
+                  value={cvv}
+                  onChange={(e) => setCvv(e.target.value)}
+                  maxLength={4}
+                  placeholder="123"
+                  required
+                />
+              </div>
             </div>
           </>
         )}
@@ -165,27 +172,31 @@ const PayNowForm = () => {
                 type="text"
                 value={upiId}
                 onChange={(e) => setUpiId(e.target.value)}
-                placeholder="Enter your UPI ID"
+                placeholder="example@upi"
                 required
               />
             </div>
           </>
         )}
         <div className="input-container">
-          <h3>Amount</h3>
+          <h3>Amount (₹)</h3>
           <input
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            placeholder="0.00"
             required
           />
         </div>
-        <button className='btn btn-outline-success ' style={{ marginLeft:'200px' }} type="submit">Pay Now</button>
+
+        <div className="pay-btn-group">
+          <button className="btn-pay" type="submit">Process Payment</button>
+          <button className="btn-back-pay" type="button" onClick={handleBack}>
+            ← Return
+          </button>
+        </div>
+        {message && <div className="payment-message">{message}</div>}
       </form>
-      <button className='btn btn-outline-success' onClick={handleBack} style={{ marginTop: '-65px',marginLeft:'400px' }}>
-        Back
-      </button>
-      {message && <p>{message}</p>}
     </div>
   );
 };

@@ -1,0 +1,138 @@
+.confirmation-container {
+    background-image: url('https://images.unsplash.com/photo-1542314831-c6a4d1409346?q=80&w=2670&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.confirmation-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.confirmation-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.receipt-header {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
+
+.receipt-header span {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.receipt-details {
+    background: #f9f9f9;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.receipt-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-top: 15px;
+}
+
+.receipt-label {
+    color: #555;
+    font-weight: 600;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.95rem;
+}
+
+.receipt-value {
+    color: #1a1a1a;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    text-align: right;
+    max-width: 60%;
+}
+
+.receipt-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-download {
+    padding: 14px 20px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-download:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-home {
+    background: transparent;
+    color: #888;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-home:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.error-state {
+    color: #d32f2f;
+    font-weight: 500;
+}

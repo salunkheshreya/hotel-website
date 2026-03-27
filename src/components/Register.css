@@ -1,42 +1,30 @@
-.registration-form{
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px;
-  width: 60%;
-  margin-left: 20%;
-  background-image: transparent;
-  border: 3px solid black;
+/* Reuse Login Styles + Register Specifics */
+@import './Login.css';
 
+/* Override image for registration if desired */
+.register-side {
+  background-image: url('https://img.freepik.com/free-photo/swimming-pool_74190-2104.jpg');
+  /* Different image for variety */
 }
-.form-container{
-background-image: url('https://img.freepik.com/free-photo/blurred-illuminated-wooden-hall_1203-1265.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-bottom: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); 
-  
+
+.register-wrapper {
+  max-width: 600px;
+  /* Wider form for registration */
 }
-h2{
-  text-align: center;
+
+/* Two-column layout for inputs */
+.input-row {
+  display: flex;
+  gap: 15px;
 }
-.registration-form input{
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  width: 90%;
-  font-size: 15px;
+
+.input-row .auth-input-group {
+  flex: 1;
 }
-.registration-form button{
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  width: 20%;
-  background-color: blue;
-  color: white;
-  font-size: 20px;
-  margin-left: 260px;
-  justify-content: center;
+
+@media (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
 }

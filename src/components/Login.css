@@ -1,47 +1,193 @@
-.login-form{
+/* Modern Luxury Login CSS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Left Side - Image */
+.auth-image-side {
+  flex: 1;
+  background-image: url('https://img.freepik.com/free-photo/luxury-bedroom-suite-resort-high-key_1150-14914.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+.auth-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.auth-overlay p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Right Side - Form */
+.auth-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  /* Changed to light gray so the white card stands out */
+  padding: 40px;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-wrapper h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #1a237e;
+  /* Royal Blue */
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-input-group {
+  margin-bottom: 5px;
+  /* Decreased space between fields even more */
+  display: block;
+}
+
+.auth-input-group label {
+  display: flex;
+  font-size: 0.95rem;
+  /* slightly larger */
+  color: #555;
+  margin-bottom: 2px;
+  /* Decreased space between label and input extremely */
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.auth-input-group input,
+.auth-input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.auth-input-group input:hover,
+.auth-input-group textarea:hover {
+  background-color: #f1f3f5;
+  border-color: #c0c0c0;
+}
+
+.auth-input-group input:focus,
+.auth-input-group textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #1a237e;
+  box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+}
+
+.auth-button {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.auth-button:hover {
+  background-color: #0d155a;
+}
+
+.auth-button:active {
+  transform: scale(0.98);
+}
+
+.auth-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e8eaf6;
+  color: #1a237e;
+  text-align: center;
+}
+
+.auth-redirect {
+  margin-top: 25px;
+  text-align: center;
+  color: #666;
+}
+
+.auth-redirect a {
+  color: #1a237e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
     flex-direction: column;
+  }
+
+  .auth-image-side {
+    flex: 0 0 200px;
+    /* Fixed height header on mobile */
+  }
+
+  .auth-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .auth-form-side {
     padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    width: 70%;
-    margin-left: 20%;
-    background-image: transparent;
-    border: 3px solid black;
-    box-shadow: cadetblue;
-     width: 60%;
-     
-}
-
-.form2{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20221228/pngtree-purple-gradient-frosted-frosted-glass-suspension-floating-background-glass-blur-effect-image_1500428.jpg');
-}
-
-h2{
-    text-align: center;
-    
-}
-
-.login-form input{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 90%;
-
-}
-
-.login-form button{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 20%;
-    background-color: blue;
-    color: white;
-    font-size: 20px;
-    margin-left: 260px;
-    justify-content: center;
+    align-items: flex-start;
+  }
 }
