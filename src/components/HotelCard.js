@@ -15,7 +15,7 @@ const HotelCard = ({ title, image, description, price,location,rating,}) => {
           <p className="hotel-card-description">{description}</p>
           <p className='hotel-card-price'> ₹{price}</p>
           
-         <Link to="/rooms"
+         <Link to="/rooms" state={{ hotelName: title, location }}
             className="book-now-button btn btn-outline-secondary" 
            > View Room
           </Link>

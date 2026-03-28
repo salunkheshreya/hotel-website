@@ -36,9 +36,45 @@
     text-align: center;
     font-family: 'Playfair Display', Georgia, serif;
     color: #1a1a1a;
-    margin-bottom: 35px;
-    font-size: 2.5rem;
+    margin: 0;
+    font-size: 2.2rem;
     letter-spacing: -0.5px;
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.toggle-recent-btn {
+    background: #f0f4f8;
+    color: #243b53;
+    border: 1px solid #d9e2ec;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-recent-btn:hover {
+    background: #121010;
+    color: #fff;
+    border-color: #121010;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.toggle-recent-btn svg {
+    font-size: 1.1rem;
 }
 
 .form-grid {
@@ -67,7 +103,8 @@
 }
 
 .input-container input,
-.input-container textarea {
+.input-container textarea,
+.input-container select {
     padding: 14px 16px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -78,11 +115,31 @@
 }
 
 .input-container input:focus,
-.input-container textarea:focus {
+.input-container textarea:focus,
+.input-container select:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
     background: #fff;
     outline: none;
+}
+
+.selection-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #f1f4f8;
+    border-radius: 12px;
+    border: 1px solid #d9e2ec;
+}
+
+.readonly-input {
+    background: #e4e9f0 !important;
+    color: #486581 !important;
+    cursor: not-allowed;
+    border-style: dashed !important;
+    font-weight: 700;
 }
 
 .input-container textarea {

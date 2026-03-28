@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { IoStarSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import './RoomDetails.css';
 
 const SemiDeluxeRoom = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const { hotelName = 'Luxury Inn', location: hotelLocation = 'Mumbai' } = location.state || {};
 
     const handleClick = () => {
         navigate("/Details")
@@ -92,7 +94,7 @@ const SemiDeluxeRoom = () => {
                             <span className="price-taxes">+800 taxes & Fees</span>
                         </div>
 
-                        <Link to="/booking" state={{ roomType: 'Semi-Deluxe Room', price: 4100 }} className="btn-book-primary">
+                        <Link to="/booking" state={{ hotelName, location: hotelLocation, roomType: 'Semi-Deluxe Room', price: 4100 }} className="btn-book-primary">
                             Book this now
                         </Link>
                     </div>

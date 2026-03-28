@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
 import { MdDining } from "react-icons/md";
 import { CiCircleMore } from "react-icons/ci";
-
+import HotelRating from "./HotelRating";
 
 const Details = ()=>{
 
@@ -46,6 +46,9 @@ const Details = ()=>{
                 <p>- Wheelchair-accessible rooms with adapted bathrooms<br></br>
                 - Electronic door locks and in-room safe for secure storage<br></br>
                 - Smoke detectors and sprinkler system for fire safety!</p></text>
+            </div>
+            <div className="m-3 w-50 mx-auto">
+                <HotelRating />
             </div>
             </div>
         </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import './BookingConfirmation.css';
+import HotelRating from './HotelRating';
+import { IoClose } from 'react-icons/io5';
 
 const BookingConfirmation = () => {
   const location = useLocation();
@@ -86,6 +88,9 @@ const BookingConfirmation = () => {
   return (
     <div className="confirmation-container">
       <div className="confirmation-card">
+        <button onClick={handleClose} className="btn-close-overlay">
+          <IoClose />
+        </button>
         <h1 className="receipt-header"><span>✓</span>Booking Confirmed</h1>
 
         {bookingDetails ? (
@@ -130,6 +135,7 @@ const BookingConfirmation = () => {
           <p className="error-state">No booking details available. Please try again.</p>
         )}
       </div>
+      <HotelRating />
     </div>
   );
 };

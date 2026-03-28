@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import config from '../config';
 import './PayNowForm.css';
 const PayNowForm = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [paymentMethod, setPaymentMethod] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [expireDate, setExpireDate] = useState('');
@@ -45,23 +47,46 @@ const PayNowForm = () => {
     if (paymentMethod === 'upi' && upiId !== '') {
 
     }
-    if (!amount || amount <= 0) {
-      setMessage('Please enter a valid amount.');
+    if (!amount || amount < 500) {
+      setMessage('Minimum payment of ₹500 is required.');
       return;
     }
-    const bookingDetails = {
-      name,
-      email,
-      checkInDate,
-      checkOutDate,
-      paymentMethod,
-      amount,
-      bookingDate: new Date().toLocaleDateString(),
-    };
-    setMessage('Payment Successful!');
-    setTimeout(() => {
-      navigate('/booking-confirmation', { state: { bookingDetails } });
-    }, 1500);
+
+    const bookingId = location.state?.bookingDetails?.id;
+    
+    // Call the update payment API
+    fetch(`${config.API_BASE_URL}/update_payment.php`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        bookingId: bookingId,
+        amount: parseFloat(amount)
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.status === 'success') {
+        const bookingDetails = {
+          name,
+          email,
+          checkInDate,
+          checkOutDate,
+          paymentMethod,
+          amount,
+          bookingDate: new Date().toLocaleDateString(),
+        };
+        setMessage('Payment Successful!');
+        setTimeout(() => {
+          navigate('/booking-confirmation', { state: { bookingDetails } });
+        }, 1500);
+      } else {
+        setMessage('Payment update failed: ' + data.message);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      setMessage('Payment processing error.');
+    });
   };
 
   const handleBack = () => {
@@ -187,6 +212,7 @@ const PayNowForm = () => {
             placeholder="0.00"
             required
           />
+          <small className="amount-hint">Minimum payment of ₹500 required</small>
         </div>
 
         <div className="pay-btn-group">

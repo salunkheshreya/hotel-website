@@ -1,0 +1,130 @@
+.hotel-rating-card {
+  position: relative;
+  z-index: 5;
+  margin-top: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rating-form-container h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.rating-form-container p {
+    margin: 10px 0 30px;
+    color: #666;
+}
+
+.emoji-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.emoji-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  flex: 1;
+}
+
+.emoji-wrapper .emoji {
+  font-size: 2.5rem;
+  transition: transform 0.3s;
+}
+
+.emoji-wrapper .emoji-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s;
+}
+
+.emoji-wrapper:hover .emoji {
+  transform: scale(1.1);
+}
+
+.emoji-wrapper:hover .emoji-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.emoji-wrapper.selected {
+  background: rgba(var(--rating-color-rgb, 64, 228, 116), 0.1);
+  box-shadow: 0 0 20px rgba(var(--rating-color-rgb, 64, 228, 116), 0.2);
+  border: 2px solid var(--rating-color);
+}
+
+.emoji-wrapper.selected .emoji-label {
+    opacity: 1;
+    color: var(--rating-color);
+    transform: translateY(0);
+}
+
+.submit-rating-btn {
+  background: #121010;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-rating-btn:hover {
+  background: #40e474;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(64, 228, 116, 0.4);
+}
+
+.submit-rating-btn.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.thank-you-container {
+    padding: 20px;
+}
+
+.thank-you-icon {
+    font-size: 4rem;
+    color: #40e474;
+    margin-bottom: 20px;
+}
+
+.selected-result {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+@media (max-width: 576px) {
+    .emoji-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .emoji-wrapper {
+        flex: 1 1 30%;
+    }
+}

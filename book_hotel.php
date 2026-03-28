@@ -11,16 +11,20 @@ if (isset($data->guest_name) && isset($data->user_email) && isset($data->room_ty
     $check_out = $data->check_out;
     $guests = $data->guests;
     $total_price = $data->total_price;
+    $hotel_name = isset($data->hotel_name) ? $data->hotel_name : 'Luxury Inn';
+    $location = isset($data->location) ? $data->location : 'Mumbai';
+    $payment_done = isset($data->payment_done) ? $data->payment_done : 0.00;
+    $remaining_payment = $total_price - $payment_done;
 
-    $stmt = $conn->prepare("INSERT INTO bookings (guest_name, user_email, room_type, check_in, check_out, guests, total_price) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO bookings (guest_name, user_email, room_type, check_in, check_out, guests, total_price, hotel_name, location, payment_done, remaining_payment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     if (!$stmt) {
         echo json_encode(["status" => "error", "message" => "Prepare failed: " . $conn->error]);
         exit;
     }
-    $stmt->bind_param("sssssid", $guest_name, $user_email, $room_type, $check_in, $check_out, $guests, $total_price);
+    $stmt->bind_param("sssssidssdd", $guest_name, $user_email, $room_type, $check_in, $check_out, $guests, $total_price, $hotel_name, $location, $payment_done, $remaining_payment);
 
     if ($stmt->execute()) {
-        echo json_encode(["status" => "success", "message" => "Booking successful. Insert ID: " . $conn->insert_id]);
+        echo json_encode(["status" => "success", "message" => "Booking successful", "insertId" => $conn->insert_id]);
     } else {
         echo json_encode(["status" => "error", "message" => "Error executing: " . $stmt->error]);
     }

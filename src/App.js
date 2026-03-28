@@ -13,6 +13,7 @@ import ImageCarousel from './components/ImageCarousel';
 import './components/styles.css';
 import Footer from './components/Footer';
 import Testimonial from './components/Testimonial';
+import Chatbot from './components/Chatbot';
 import './App.css';
 
 import AvailabilityForm from './components/AvailabilityForm';
@@ -68,6 +69,7 @@ function App() {
         <Route path='/booking-confirmation' element={<BookingConfirmation />} />
       </Routes>
 
+      <Chatbot />
       <Footer />
     </Router>
   );

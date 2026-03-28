@@ -1,0 +1,138 @@
+.review-insights {
+  background: rgba(255, 255, 255, 0.05); /* Slight dark translucent background */
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px;
+  margin-top: 40px;
+  border: 1px solid rgba(64, 228, 116, 0.2); /* Soft green border */
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(64, 228, 116, 0.1);
+  color: white;
+}
+
+.insights-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.ai-icon {
+  font-size: 2rem;
+  color: #40e474;
+  animation: pulseAI 2s infinite ease-in-out;
+}
+
+@keyframes pulseAI {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(64, 228, 116, 0)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 10px rgba(64, 228, 116, 0.5)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(64, 228, 116, 0)); }
+}
+
+.insights-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.insight-card {
+  background: rgba(18, 16, 16, 0.6);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-label svg {
+  color: #40e474;
+}
+
+.sentiment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sentiment-value {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.sentiment-value .number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #40e474;
+}
+
+.sentiment-value .label {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.gauge-container {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gauge-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #40e474, #b2ff59);
+  box-shadow: 0 0 10px rgba(64, 228, 116, 0.6);
+}
+
+.summary-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eee;
+  font-style: italic;
+  margin: 0;
+}
+
+.pros, .cons {
+  grid-column: span 1;
+}
+
+.pros-list, .cons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pros-list li, .cons-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.pros-list li .icon { color: #40e474; }
+.cons-list li .icon { color: #ffeb3b; }
+
+@media (max-width: 992px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}

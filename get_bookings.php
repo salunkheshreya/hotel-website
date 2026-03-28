@@ -10,10 +10,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-$query = "SELECT CONCAT('BK', LPAD(b.id, 3, '0')) as id, COALESCE(b.guest_name, u.name, 'Guest') as guest, b.room_type as room, b.check_in as checkIn, b.check_out as checkOut, b.total_price as amount, 'Confirmed' as status 
+// Get email from query parameter if provided
+$email = isset($_GET['email']) ? mysqli_real_escape_string($conn, $_GET['email']) : null;
+
+$query = "SELECT CONCAT('BK', LPAD(b.id, 3, '0')) as id, COALESCE(b.guest_name, u.name, 'Guest') as guest, b.room_type as room, b.check_in as checkIn, b.check_out as checkOut, b.total_price as amount, 'Confirmed' as status, b.hotel_name, b.location, b.payment_done, b.remaining_payment 
           FROM bookings b 
-          LEFT JOIN users u ON b.user_email = u.email 
-          ORDER BY b.created_at DESC";
+          LEFT JOIN users u ON b.user_email = u.email";
+
+if ($email) {
+    $query .= " WHERE b.user_email = '$email' OR u.email = '$email'";
+}
+
+$query .= " ORDER BY b.created_at DESC";
 
 $result = $conn->query($query);
 
